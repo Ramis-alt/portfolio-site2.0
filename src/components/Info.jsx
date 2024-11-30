@@ -12,10 +12,10 @@ export default function Info() {
     };
     return (
         <main className="main--body">
-            <img src='images/IMG_3627.png' alt="Ramiro Renteria, smiling." />
+            <img src='images/IMG_3627.png' className='profile-pic' alt="Ramiro Renteria, smiling." />
             <div className="profile-info">
                 <h1>Ramiro Renteria</h1>
-                <h4>Full Stack Web Developer</h4>
+                <h4>Junior Full Stack Web Developer</h4>
                 <h5><Link to='/contact' className='contact--edit' aria-label="Contact Ramiro Renteria">Contact</Link></h5>
                 <hr></hr>
                 <div className="myDetails">
@@ -34,52 +34,54 @@ export default function Info() {
                     </section>
                     <section aria-labelledby="achievements-heading">
                         <h2 id="achievements-heading">My Certificates</h2>
-                        <button onClick={() => setShowCertificate('certificate1')} aria-label="Show Certificate">Front-End</button>
-                        <button onClick={() => setShowCertificate('certificate2')} aria-label="Show Certificate">Full-Stack</button>
-                        <button onClick={() => setShowCertificate('certificate3')} aria-label="Show Certificate">Back-End</button>
-                        <button onClick={() => setShowCertificate('certificate4')} aria-label="Show Certificate">Resume</button>
+                        <button onClick={() => setShowCertificate('certificate1')} aria-label="Show Certificate" className='cert-buttons'>Front-End</button>
+                        <button onClick={() => setShowCertificate('certificate2')} aria-label="Show Certificate" className='cert-buttons'>Full-Stack</button>
+                        <button onClick={() => setShowCertificate('certificate3')} aria-label="Show Certificate" className='cert-buttons'>Back-End</button>
+                        <button onClick={() => setShowCertificate('certificate4')} aria-label="Show Certificate" className='cert-buttons'>Resume</button>
 
                         {showCertificate === 'certificate1' && (
                             <div className="certificate-container">
-                                <button onClick={handleClose} aria-label="Close Certificate">X</button>
-                                <iframe
-                                    src='/Ramiro-Renteria-Student-ID-22324-Front-End-Web-App-Development-Course.pdf'
+                                <button onClick={handleClose} aria-label="Close Certificate" className='close-button'>X</button>
+                                <img
+                                    src='./images/Ramiro-Renteria-Student-ID-22324-Front-End-Web-App-Development-Course-000.png'
                                     className="certificate-frame"
-                                    title='Front End Web-App Development Course'
-                                ></iframe>
+                                    alt='Front End Web-App Development Course'
+                                />
                             </div>
                         )}
                         {showCertificate === 'certificate2' && (
                             <div className="certificate-container">
-                                <button onClick={handleClose} aria-label="Close Certificate">X</button>
-                                <iframe
-                                    src='/Ramiro Renteria-Student-ID-22324-Full Stack Web-App Development Course.pdf'
+                                <button onClick={handleClose} aria-label="Close Certificate" className='close-button'>X</button>
+                                <img
+                                    src='./images/Ramiro-Renteria-Student-ID-22324-Full Stack Web-App Development Course-000.png'
                                     className="certificate-frame"
-                                    title='Full Stack Development Course'
-                                ></iframe>
-                                
+                                    alt='Full Stack Development Course'
+                                />
                             </div>
                         )}
                         {showCertificate === 'certificate3' && (
                             <div className="certificate-container">
-                                <button onClick={handleClose} aria-label="Close Certificate">X</button>
-                                <iframe
-                                    src='/Ramiro Renteria-Student-ID-22324-Intro to Back-End Web-Development Module.pdf'
+                                <button onClick={handleClose} aria-label="Close Certificate" className='close-button'>X</button>
+                                <img
+                                    src='./images/Ramiro-Renteria-Student-ID-22324-Intro to Back-End Web-Development Module-000.png'
                                     className="certificate-frame"
-                                    title='Back End Development Course'
-                                ></iframe>
-                                
+                                    alt='Back End Development Course'
+                                />
                             </div>
                         )}
                         {showCertificate === 'certificate4' && (
                             <div className="certificate-container">
-                                <button onClick={handleClose} aria-label="Close Certificate">X</button>
-                                <iframe
-                                    src='/ResumeMostCurrent1.pdf'
+                                <button onClick={handleClose} aria-label="Close Certificate" className='close-button'>X</button>
+                                <img
+                                    src='./images/ResumeMostCurrent1-000.png'
                                     className="certificate-frame"
-                                    title='Resume'
-                                ></iframe>
-                                
+                                    alt='Resume'
+                                />
+                                <img
+                                    src='./images/ResumeMostCurrent1-001.png'
+                                    className="certificate-frame"
+                                    alt='Resume'
+                                />
                             </div>
                         )}
                     </section>

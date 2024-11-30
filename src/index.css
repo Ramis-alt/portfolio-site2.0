@@ -14,6 +14,7 @@ body {
 img {
   width: 80%;
   height: auto;
+  border-radius: 30px;
 }
 
 .main--body {
@@ -29,9 +30,30 @@ img {
   box-shadow: 0 20px 30px 10px rgba(4, 4, 4, 0.7);
 }
 
-img {
+
+.profile-pic {
   padding: 20px;
-  border-radius: 30px;
+}
+
+.cert-buttons {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: rgb(195, 185, 185);
+}
+
+.cert-buttons:hover {
+  background-color: #5093E2;
+  cursor: pointer;
+}
+
+.close-button {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.close-button:hover {
+  background-color: #5093E2;
+  cursor: pointer;
 }
 
 #button1, #button2 {
@@ -225,10 +247,9 @@ ul {
   align-items: center;
   align-content: center;
   width: 100%;
-  height: 450px;
+  /* height: 450px; 11/29/24*/
   /* height:auto; */
   border: none;
-  /* Additional styles if needed */
 }
 
 #achievements-heading {
