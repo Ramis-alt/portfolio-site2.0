@@ -5,6 +5,8 @@ export default function Info() {
     const afterClick = "https://www.linkedin.com/in/ramiro-renteria-24bba520/";
     const myGitHub = "https://github.com/Ramis-alt";
     //showCertificate is set to null so that no certificate is shown when the page is first loaded.
+    //when a button corresponding to a selected button is clicked, showCertificate changes from null to "true" 
+    //and the corresponding image is rendered.
     const [showCertificate, setShowCertificate] = React.useState(null);
 
     const handleClose = () => {
@@ -34,11 +36,13 @@ export default function Info() {
                     </section>
                     <section aria-labelledby="achievements-heading">
                         <h2 id="achievements-heading">My Certificates</h2>
+                        {/* clicking on the button calls on setShowCertificate */}
                         <button onClick={() => setShowCertificate('certificate1')} aria-label="Show Certificate" className='cert-buttons'>Front-End</button>
                         <button onClick={() => setShowCertificate('certificate2')} aria-label="Show Certificate" className='cert-buttons'>Full-Stack</button>
                         <button onClick={() => setShowCertificate('certificate3')} aria-label="Show Certificate" className='cert-buttons'>Back-End</button>
                         <button onClick={() => setShowCertificate('certificate4')} aria-label="Show Certificate" className='cert-buttons'>Resume</button>
-
+                        {/* if showCertificate is strickly equal to a specific button that's clicked, then 
+                        the content inside the div is rendered.  */}
                         {showCertificate === 'certificate1' && (
                             <div className="certificate-container">
                                 <button onClick={handleClose} aria-label="Close Certificate" className='close-button'>X</button>
